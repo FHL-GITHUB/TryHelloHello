@@ -26,7 +26,6 @@ public class AdminMgr {
     
     private TxtReaderWriter txtReaderWriter;
     
-
     public AdminMgr(){
         this.formatter = new SimpleDateFormat("yyyy MM dd HH mm");
         this.startDateTime = new Date(System.currentTimeMillis());
