@@ -1,4 +1,4 @@
-package com.ntustars.entity;
+package com.ntustars.controller;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
