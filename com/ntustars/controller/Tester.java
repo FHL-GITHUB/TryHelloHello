@@ -8,11 +8,10 @@ public class Tester {
         //admin.updStudParticulars();
         //admin.printAllStudent();
         
-        admin.printStudListByIndex();
-        admin.printStudListByCourse();
+        //admin.printStudListByIndex();
+        //admin.printStudListByCourse();
         
         //admin.addStudInfo();
-        
         
     } 
 
