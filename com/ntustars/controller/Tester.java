@@ -1,4 +1,4 @@
-package sce.cz2002.assignment;
+package com.ntustars.controller;
 
 public class Tester {   
 
