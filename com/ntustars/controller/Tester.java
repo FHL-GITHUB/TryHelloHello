@@ -14,8 +14,6 @@ public class Tester {
         //admin.addStudInfo();
         
         
-    }
-
-	 
+    } 
 
 }
