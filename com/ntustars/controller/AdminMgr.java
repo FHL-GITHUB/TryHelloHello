@@ -81,14 +81,12 @@ public class AdminMgr {
         break;      
 	}
         
-        
         if(this.endDateTime.after(this.startDateTime)) {
         	break;
         }
         
         System.out.println("Please enter a valid period!");
         
-
     }
         
         this.setStartAccessDate(startDateTime);
@@ -140,8 +138,6 @@ public class AdminMgr {
 		sc.nextLine();
 		gender = Character.toUpperCase(gender);
 
-		
-		
 		System.out.println("Please enter the nationality of "+name+":");
     	String nationality = sc.nextLine();
     	while(!nationality.matches("^[a-zA-Z]*$"))
@@ -153,8 +149,6 @@ public class AdminMgr {
     	
     	nationality = nationality.toUpperCase();
     	
-    	
-        
         StudParticulars studentP = new StudParticulars(name,matricNum,gender,nationality);
         
         System.out.println("Writing information to DB......");
@@ -162,9 +156,8 @@ public class AdminMgr {
         if(status) {
         	System.out.println("Added student inforamtion successfully.");
         }
-        
-
     }
+	
  
     private boolean writeStudent(StudParticulars studentP) throws IOException
     {
@@ -173,7 +166,6 @@ public class AdminMgr {
     	if (studentP.getName().isEmpty()|| studentP.getMatricNum().isEmpty()||studentP.getGender()==0 ||studentP.getNationality().isEmpty()) {
     		System.out.print("Insufficient student information input.");
     	}
-    	
     	
     	for(List student:readAllStudents()) {
     		if(studentP.getName().equals(student.get(0))) {
@@ -221,20 +213,14 @@ public class AdminMgr {
     	name = name.toUpperCase();
     	System.out.println(name);
     	
-    	
     	int index = -1;
     	for(List student:readAllStudents()) {
     		if(name.equals(student.get(0))) {
     			index = readAllStudents().indexOf(student);
-  
-    			//newStudent = new StudParticulars(student.get(0).toString(),student.get(1).toString(),student.get(2).toString().charAt(0),student.get(3).toString());
-    			//System.out.println("HERE");}
     		newStudInfo = student;
     		break;
     	}}
-    	
-    	
-    	
+	    
     	if(index == -1) {
     		System.out.println("The student does not exist!");
     		return;
@@ -344,9 +330,7 @@ public class AdminMgr {
     	FileWriter writer = null;
     	CourseMgr cMgr = new CourseMgr();
   
-        
         String oldFile = "";
-        
         String oldLine = "";
         
         StringBuilder builder = new StringBuilder();
@@ -399,9 +383,7 @@ public class AdminMgr {
             }
         }
     	
-        
     	return success;
-    	
     }
 
     private ArrayList<List> readAllStudents() throws IOException{
